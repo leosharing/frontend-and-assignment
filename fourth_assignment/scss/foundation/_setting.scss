@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@400;500&display=swap');
+
+$font-roboto: 'Roboto', sans-serif;
+$font-archivo: 'Archivo', sans-serif;
+
+$primary-color: #3B3735;
+$sec-color: #E76F51;
+$bg-color: #FAF4F2;
+$sidebar: #FFD2C6;
+
+$font-size-1: 16px;
+$font-size-2: 18px;
+$font-size-3: 40px;
+$font-size-4: 81px;
+
+$text-white: #fff;
+$text-black: #000;
+$navlink: #D2D2D2;
+
+
+@mixin flexDesign() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexGap($gap1) {
+    gap: $gap1;
+}
+
+@mixin flexGap1($gap1 , $gap2) {
+    gap: $gap1 $gap2 ;
+}
+
+@mixin flexDirection($direction : row) {
+    flex-direction: $direction;
+}
