@@ -1,0 +1,59 @@
+.card {
+    width: calc(100% / 4 - 30px);
+
+    border-radius: 20px;
+
+    background-color: #fff;
+
+    &__inner {
+        padding: 60px 20px;
+
+        @include flexDesign();
+        justify-content: center;
+        @include flexDirection(column);
+
+        gap: 30px;
+
+        @media (max-width: 990px) {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        width: calc(100% / 2 - 30px);
+    }
+
+    @media (max-width: 600px) {
+        width: calc(100% / 1 - 30px);
+    }
+
+    &__img img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+    }
+
+    &__body {
+        @include flexDesign();
+        justify-content: center;
+        @include flexDirection(column);
+
+        gap: 11px;
+    }
+
+    &__title {
+        font-family: $font-archivo;
+        font-size: $font-size-2;
+        font-weight: 900;
+    }
+
+    &__desc {
+        line-height: 26px;
+
+        text-align: center;
+
+        font-family: $font-roboto;
+        font-size: $font-size-1;
+    }
+}
