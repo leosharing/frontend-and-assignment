@@ -64,5 +64,30 @@
         @media (max-width: 470px) {
             margin: 100px 0;
         }
+
+        .wrap-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .activies-cards {
+                display: flex;
+                flex-wrap: wrap;
+
+                gap: 30px;
+            }
+        }
+    }
+
+    &--form {
+        height: 50vh;
+
+        border-radius: 20px;
+
+        background: url("../../../img/Subscribe.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

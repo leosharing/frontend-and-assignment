@@ -434,6 +434,19 @@ table {
   border: 0;
   background: #E76F51;
 }
+.c-btn--readmore a {
+  margin-top: 14px;
+  width: 185px;
+  color: #8D8D8D;
+  background-color: rgba(141, 141, 141, 0.1);
+}
+.c-btn--viewmore a {
+  margin-top: 60px;
+  width: 205px;
+  border: 1px solid #E76F51;
+  border-radius: 25px;
+  color: #E76F51;
+}
 
 .c-title--activities {
   display: flex;
@@ -536,6 +549,39 @@ table {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
+.card--activity {
+  width: calc(25% - 30px);
+}
+.card--activity .card__inner {
+  padding: 40px;
+  gap: 43px;
+}
+.card--activity .card__img {
+  position: relative;
+}
+.card--activity .card__img img {
+  border-radius: 20px;
+}
+.card--activity .card__img .love-icon {
+  padding: 9px;
+  color: #E76F51;
+  border-radius: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+}
+.card--activity .card__price {
+  margin-top: -70px;
+  padding: 17px 40px;
+  color: #E76F51;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 14px;
+  background-color: #fff;
+  z-index: 5;
+}
 
 .mainvisiual {
   height: 100vh;
@@ -597,4 +643,23 @@ table {
   .p-bloc--activities {
     margin: 100px 0;
   }
+}
+.p-bloc--activities .wrap-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.p-bloc--activities .wrap-content .activies-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.p-bloc--form {
+  height: 50vh;
+  border-radius: 20px;
+  background: url("../../../img/Subscribe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

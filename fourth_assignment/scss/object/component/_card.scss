@@ -56,4 +56,58 @@
         font-family: $font-roboto;
         font-size: $font-size-1;
     }
+
+    &--activity {
+        width: calc(100% / 4 - 30px);
+
+        .card {
+            &__inner {
+                padding: 40px;
+
+                gap: 43px;
+            }
+
+            &__img {
+                position: relative;
+
+                img {
+                    border-radius: 20px;
+                }
+
+                .love-icon {
+                    padding: 9px;
+
+                    color: $sec-color;
+
+                    border-radius: 14px;
+
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+
+                    background-color: #fff;
+                }
+            }
+
+            &__price {
+                margin-top: -70px;
+
+                padding: 17px 40px;
+
+                color: $sec-color;
+
+                font-family: $font-roboto;
+                font-size: $font-size-1;
+                font-weight: 500;
+
+                border-radius: 14px;
+
+                background-color: #fff;
+
+                z-index: 5;
+            }
+        }
+
+    }
+
 }

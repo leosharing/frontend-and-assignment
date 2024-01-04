@@ -51,4 +51,30 @@
             background: $sec-color;
         }
     }
+
+    &--readmore {
+        a {
+            margin-top: 14px;
+
+            width: 185px;
+
+            color: #8D8D8D;
+            background-color: rgba(141, 141, 141, 0.1);
+        }
+    }
+
+    &--viewmore {
+
+        a {
+            margin-top: 60px;
+
+            width: 205px;
+
+
+            border: 1px solid $sec-color;
+            border-radius: 25px;
+
+            color: $sec-color;
+        }
+    }
 }
