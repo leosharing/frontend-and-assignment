@@ -1,0 +1,54 @@
+.c-btn {
+    a {
+        padding: 16px 0;
+
+        width: 130px;
+
+        text-decoration: none;
+
+        font-size: $font-size-2;
+        font-weight: 500;
+        font-family: $font-roboto;
+
+        border: 1px solid $text-white;
+        border-radius: 25px;
+
+        color: $text-white;
+
+
+        @include flexDesign();
+        justify-content: center;
+
+        @media (max-width:1280px) {
+            padding: 12px 0;
+
+            width: 110px;
+            font-size: $font-size-1;
+        }
+
+        transition: all 1s linear;
+
+    }
+
+    &--signup {
+        a {
+            border: 0;
+        }
+    }
+
+    &--mobile {
+        a {
+            color: #000;
+        }
+    }
+
+    &--discover {
+        a {
+            width: 205px;
+
+            border: 0;
+
+            background: $sec-color;
+        }
+    }
+}
