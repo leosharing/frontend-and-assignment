@@ -1,11 +1,11 @@
 .mainvisiual {
     // padding: 0 35px;
 
-    height: 100vh;
+    height: 980px;
 
     border-radius: 0 0 200px 200px;
 
-    background: url("../../../img/BG1.png");
+    background: url("../../../img/bg1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +17,10 @@
 
     transition: all 1s linear;
 
+    @media screen and (max-width: 1600px) {
+        height: 1080px;
+    }
+
     @media (max-width: 470px) {
         border-radius: 0 0 100px 100px;
 
@@ -27,6 +31,9 @@
     width: 79%;
     margin: 0 auto;
 
+    display: flex;
+    flex-direction: column;
+    row-gap: 150px;
 
     transition: all 1s linear;
 
@@ -35,7 +42,7 @@
     }
 
     @media (max-width: 470px) {
-        padding: 0 20px;
+        // padding: 0 20px;
         width: 374px;
     }
 
@@ -46,70 +53,151 @@
 
 .p-bloc {
     &--cards {
-        margin-top: -110px;
+        margin-top: -100px;
 
         display: flex;
-        justify-content: center;
         gap: 30px;
         flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
 
+    }
 
-        .card {
-            width: calc(100% / 4 - 30px);
+    &--activities {
+        .wrap-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-            border-radius: 20px;
-
-            background-color: #fff;
-
-            &__inner {
-                padding: 60px 20px;
-
-                @include flexDesign();
+            .activies-cards {
+                display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
-                @include flexDirection(column);
 
-                gap: 20px;
-            }
-
-            @media (max-width: 1280px) {
-                width: calc(100% / 2 - 30px);
-            }
-
-            @media (max-width: 600px) {
-                width: calc(100% / 1 - 30px);
-            }
-
-            &__img img {
-                width: 100%;
-                height: 100%;
-
-                display: block;
-            }
-
-            &__body {
-                @include flexDesign();
-                justify-content: center;
-                @include flexDirection(column);
-
-                gap: 11px;
-            }
-
-            &__title {
-                font-family: $font-archivo;
-                font-size: $font-size-2;
-                font-weight: 900;
-            }
-
-            &__desc {
-                line-height: 26px;
-
-                text-align: center;
-
-                font-family: $font-roboto;
-                font-size: $font-size-1;
+                gap: 30px;
             }
         }
     }
 
-    &--activities {}
+    &--form {
+        margin-bottom: 100px;
+
+        background: url('../../../img/subscribe.png') no-repeat;
+        background-size: 100% 100%;
+
+        .form-bloc {
+            margin: 0 auto;
+
+            max-width: 1300px;
+            height: 390px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .txt-box {
+                width: 47%;
+
+                @media screen and (max-width: 1050px) {
+                    width: 60%;
+                }
+
+                &__inner {
+                    padding-right: 100px;
+                    margin-bottom: 30px;
+                }
+
+                h4 {
+                    font-family: 'Archivo Black', sans-serif;
+                    font-size: 40px;
+                    line-height: 1.3;
+                    color: #3b3735;
+                }
+
+                .form-bloc__input {
+                    position: relative;
+                    width: 100%;
+
+                    input[type="text"] {
+                        padding: 0 60px;
+
+                        width: 80%;
+                        height: 80px;
+
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        border-radius: 20px;
+                        border: 0;
+
+                        outline: none;
+
+                        background: #fff url("../../../img/mail.png") no-repeat;
+                        background-position: 30px center;
+
+                        display: block;
+                    }
+
+                    input[type="submit"] {
+
+                        width: 80px;
+                        height: 80px;
+
+                        border: 0;
+
+                        outline: none;
+
+                        background: url("../../../img/icon.png") no-repeat;
+                        background-size: 50px 50px;
+                        background-position: center;
+
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 1600px) {
+                max-width: 1000px;
+
+                input[type="submit"] {
+                    right: -25px;
+                }
+            }
+
+            @media screen and (max-width: 1300px) {
+                max-width: 800px;
+            }
+
+            @media screen and (max-width: 1050px) {
+                max-width: 650px;
+
+                .img-box {
+                    display: flex;
+                    justify-content: end;
+
+                    img {
+                        width: 75%;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 850px) {
+                flex-direction: column;
+
+                .img-box {
+                    order: 1;
+                }
+
+                .txt-box {
+                    order: 2;
+                }
+            }
+        }
+    }
 }
