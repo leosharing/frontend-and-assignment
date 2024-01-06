@@ -5,7 +5,7 @@
 
     border-radius: 0 0 200px 200px;
 
-    background: url("../../../img/BG1.png");
+    background: url("../../../img/bg1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,6 +73,7 @@
             .activies-cards {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
 
                 gap: 30px;
             }
@@ -80,19 +81,27 @@
     }
 
     &--form {
-        background: url('../../../img/Subscribe.png') no-repeat;
+        margin-bottom: 100px;
+
+        background: url('../../../img/subscribe.png') no-repeat;
         background-size: 100% 100%;
 
         .form-bloc {
-            max-width: 1300px;
             margin: 0 auto;
+
+            max-width: 1300px;
+            height: 390px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 80px 0;
 
             .txt-box {
                 width: 47%;
+
+                @media screen and (max-width: 1050px) {
+                    width: 60%;
+                }
 
                 &__inner {
                     padding-right: 100px;
@@ -150,6 +159,43 @@
 
                         cursor: pointer;
                     }
+                }
+            }
+
+            @media screen and (max-width: 1600px) {
+                max-width: 1000px;
+
+                input[type="submit"] {
+                    right: -25px;
+                }
+            }
+
+            @media screen and (max-width: 1300px) {
+                max-width: 800px;
+            }
+
+            @media screen and (max-width: 1050px) {
+                max-width: 650px;
+
+                .img-box {
+                    display: flex;
+                    justify-content: end;
+
+                    img {
+                        width: 75%;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 850px) {
+                flex-direction: column;
+
+                .img-box {
+                    order: 1;
+                }
+
+                .txt-box {
+                    order: 2;
                 }
             }
         }
