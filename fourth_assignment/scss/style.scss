@@ -5,4 +5,12 @@
 @import "./layout/layout";
 @import "./object/component/mobile-nav";
 @import "./object/component/btn";
+@import "./object/component/title";
+@import "./object/component/card";
+@import "./object/component/pagetop";
 @import "./object/project/page-index";
+
+body {
+    box-sizing: border-box;
+
+}
