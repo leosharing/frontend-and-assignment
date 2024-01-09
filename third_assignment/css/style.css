@@ -124,8 +124,17 @@
 .l-content .p-bloc--faqs .faq__title + i {
   font-size: 1.5rem;
 }
-.l-content .p-bloc--faqs .faq__ans {
+.l-content .p-bloc--faqs .faq__ans.show {
   padding: 2rem;
+  height: auto;
+  opacity: 1;
+  visibility: 1;
+}
+.l-content .p-bloc--faqs .faq__ans {
+  height: 0;
+  visibility: 0;
+  opacity: 0;
+  transition: all 500ms linear;
 }
 
 .ft__txt {
